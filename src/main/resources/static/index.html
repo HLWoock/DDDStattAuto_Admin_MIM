@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//cdn.muicss.com/mui-latest/css/mui.min.css" rel="stylesheet" type="text/css" />
+    <link href="static/style.css" rel="stylesheet" type="text/css" />
+    <script src="//cdn.muicss.com/mui-latest/js/mui.min.js"></script>
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="static/script.js"></script>
+  </head>
+  <body>
+    <div id="sidedrawer" class="mui--no-user-select">
+      <div id="sidedrawer-brand" class="mui--appbar-line-height">
+        <span class="mui--text-title">µSIM</span>
+      </div>
+      <div class="mui-divider"></div>
+      <ul>
+        <li>
+          <strong>Admin</strong>
+          <ul>
+            <li>Configuration
+              <ul>
+                <li>Fuhrpark <a href="http://localhost:8888/fuhrpark-service/master"     target="_blank">xml</a>
+                		     <a href="http://localhost:8888/fuhrpark-service-master.yml" target="_blank">yml</a>	
+                </li>
+                <li>Reservierung <a href="http://localhost:8888/reservierung-service/master"     target="_blank">xml</a>
+                		         <a href="http://localhost:8888/reservierung-service-master.yml" target="_blank">yml</a>	
+                </li>
+              </ul>
+            </li>
+            <li>Dashboards
+              <ul>
+				<li><a href="http://localhost:8010/" target="_blank">Circuit Breaker </a> - Hystrix Dashboard<br></li>
+				<li><a href="http://localhost:8010/hystrix/monitor?stream=http%3A%2F%2Flocalhost%3A8010%2Fmock.stream" target="_blank">Circuit Breaker </a> - Hystrix Monitor<br></li>
+				<li><a href="http://localhost:8761/" target="_blank">Registry and Recovery </a>  - Eureka<br></li>
+				<li><a href="http://localhost:7777/#/" target="_blank">Spring Boot Admin </a> <br></li>
+				<li><a href="http://localhost:7778/#/" target="_blank">µServices Dashboard Server </a><br></li>
+              </ul>
+            </li>
+            <li>Operation
+              <ul>
+                <li><a href="http://localhost:8161/admin/queueGraph.jsp" target="_blank">ActiveMQ </a> - Dashboard<br></li>
+              </ul>
+            </li>
+            <li>Logging
+              <ul>
+				<li><a href="http://localhost:9411/" target="_blank">Logging </a><br></li>
+				<li><a href="http://localhost:3000/login" target="_blank">Grafana </a><br></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Architektur</strong>
+          <ul>
+            <li><a href="DomainModell.html" target="_blank">Domain Modell</a></li>
+            <li><a href="Bausteinsicht.html" target="_blank">Bausteinsicht</a></li>
+            <li><a href="Infrastruktur" target="_blank">Infrastruktur</a></li>
+            <li><a href="Security"      target="_blank">Security</a></li>
+          </ul>
+        </li>
+        <li>        
+        <li>
+          <strong>Auswertung</strong>
+          <ul>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 2</a></li>
+            <li><a href="#">Item 3</a></li>
+          </ul>
+        </li>
+        <li>
+          <strong>Entwickler</strong>
+          <ul>
+            <li><a href="#">Git</a></li>
+            <li><a href="#">Logging</a></li>
+            <li><a href="#">Register und Discocery</a></li>
+            <li><a href="#">Feign</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">Messaginng</a></li>
+            <li><a href="#">Zuul</a></li>
+          </ul>
+        </li>
+        <li>
+          <strong>µServices</strong>
+          <ul>
+            <li><a href="#">Fuhrpark</a>
+            	<ul>
+            		<li>REST Api</li>
+            		<li>Features</li>
+            	</ul>
+            </li>
+            <li><a href="#">Reservierung</a></li>
+            <li><a href="#">Backoffice</a></li>
+            <li><a href="#">Callcenter</a></li>
+            <li><a href="#">Marketing</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    
+    <header id="header">
+      <div class="mui-appbar mui--appbar-line-height">
+        <div class="mui-container-fluid">
+          <a class="sidedrawer-toggle mui--visible-xs-inline-block mui--visible-sm-inline-block js-show-sidedrawer">☰</a>
+          <a class="sidedrawer-toggle mui--hidden-xs mui--hidden-sm js-hide-sidedrawer">☰</a>
+          <td class="mui--appbar-height">StattAuto  --  µService Information Model</td>
+          <span class="mui--text-title mui--visible-xs-inline-block mui--visible-sm-inline-block">µSIM</span>
+        </div>
+      </div>
+    </header>
+    
+    <div id="content-wrapper">
+      <div class="mui--appbar-height"></div>
+      <div class="mui-container-fluid">
+        <br>
+        <h1>µService Information Model</h1>
+        <div class="mui-panel">
+          <h3>Admin</h3>
+  			<div class="highlight"><pre><span>Configuration</span></div>
+  			<p>Configuration ist verfügbar in xml und yml</p>
+  			<div class="highlight"><pre><span>Dashboards</span></div>
+  			<div class="highlight"><pre><span>Operation</span></div>
+  			<div class="highlight"><pre><span>Logging</span></div>
+        </div>
+        
+        <div class="mui-panel">
+          <h3>Auswertung</h3>
+  			<p>bla</p>
+  			<div class="highlight"><pre><span>bla</span></div>
+        </div>
+        
+       <div class="mui-panel">
+          <h3>µServices</h3>
+  			<p>Hier sind Informationen zu den einzelnen fachlichen µServices finden:</p>
+  			<div class="highlight"><pre><span>REST Doku</span></div>
+  			<div class="highlight"><pre><span>Features</span></div>
+  			<div class="highlight"><pre><span>Actuator</span></div>
+        </div>
+	  </div>
+    </div>
+
+    <footer id="footer">
+      <div class="mui-container-fluid">
+        <br>
+        <a href="https://www.muicss.com">StattAuto</a>
+      </div>
+    </footer>
+  </body>
+</html>
