@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>CCC REST</title>
+</head>
+<body>
+	<h1>Schema für REST-Zugriffe auf den Server</h1>
+	<img src="Image/CCC_REST.png" alt="Selfhtml">
+	
+	<ul>
+		<b><li>Client</li></b>
+			<ul>
+				<li>GUI</li>
+					<ul>
+						<li><text style="color:yellow; background-color:lightgray;">Model</text></li>
+						<li><text style="color:yellow; background-color:lightgray;">View</text></li>
+						<li><text style="color:yellow; background-color:lightgray;">Control</text></li>
+					</ul>
+				<li>BL</li>
+					<ul>
+						<li><text style="color:yellow; background-color:lightgray;">Service</text></li>
+						<li><text style="color:yellow; background-color:lightgray;">Fallback</text></li>
+					</ul>
+				<li>Integration</li>
+					<ul>
+						<li><text style="color:orange">Feign</text></li>
+						<li><text style="color:orange">Hystrix, Turbine</text></li>
+						<li><text style="color:orange">Ribbon</text></li>
+					</ul>
+			</ul>
+		<b><li>Server</li></b>
+			<ul>
+				<li><text style="color:orange">Zuul</text></li>
+				<li><text style="color:green">Adapter</text></li>
+				<li><text style="color:green">Service</text></li>
+			</ul>
+		<b><li>Infrastruktur</li></b>
+			<ul>
+				<li><text style="color:orange">Actuator</text></li>
+				<li><text style="color:orange">Archaius</text></li>
+				<li><text style="color:orange">Authentication</text></li>
+				<li><text style="color:orange">Eureka</text></li>
+				<li><text style="color:orange">Sleuth</text></li>
+				<li><text style="color:orange">Turbine</text></li>
+				<li><text style="color:orange">Zipkin</text></li>
+			</ul>
+	</ul>
+</body>
+</html>

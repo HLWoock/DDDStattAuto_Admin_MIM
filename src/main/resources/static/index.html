@@ -20,25 +20,96 @@
         <li>
           <strong>Admin</strong>
           <ul>
-            <li>Configuration
+            <li>Service Configuration
               <ul>
-                <li>Fuhrpark <a href="http://localhost:8888/fuhrpark-service/master"     target="_blank">xml</a>
-                		     <a href="http://localhost:8888/fuhrpark-service-master.yml" target="_blank">yml</a>	
-                </li>
-                <li>Reservierung <a href="http://localhost:8888/reservierung-service/master"     target="_blank">xml</a>
-                		         <a href="http://localhost:8888/reservierung-service-master.yml" target="_blank">yml</a>	
-                </li>
+                <li>Fuhrpark <a href="http://localhost:8888/fuhrpark-service/master"            target="_blank">xml</a>
+                		    <a href="http://localhost:8888/fuhrpark-service-master.yml"         target="_blank">yml</a></li>
+                <li>Reservierung <a href="http://localhost:8888/reservierung-service/master"    target="_blank">xml</a>
+                		        <a href="http://localhost:8888/reservierung-service-master.yml" target="_blank">yml</a></li>
+                <li>Mitglieder <a href="http://localhost:8888/mitglieder-service/master"        target="_blank">xml</a>
+                		      <a href="http://localhost:8888/mitglieder-service-master.yml"     target="_blank">yml</a></li>
+                <li>Logging <a href="http://localhost:8888/zipkin-service/master"               target="_blank">xml</a>
+                		   <a href="http://localhost:8888/zipkin-service-master.yml"            target="_blank">yml</a></li>
+                <li>CircuitBreaker <a href="http://localhost:8888/hystrix-dashboard/master"     target="_blank">xml</a>
+                		          <a href="http://localhost:8888/hystrix-dashboard-master.yml"  target="_blank">yml</a></li>
+                <li>Auslastung <a href="http://localhost:8888/auslastung-service/master"        target="_blank">xml</a>
+                		      <a href="http://localhost:8888/auslastung-service-master.yml"     target="_blank">yml</a></li>
               </ul>
             </li>
-            <li>Dashboards
-              <ul>
-				<li><a href="http://localhost:8010/" target="_blank">Circuit Breaker </a> - Hystrix Dashboard<br></li>
-				<li><a href="http://localhost:8010/hystrix/monitor?stream=http%3A%2F%2Flocalhost%3A8010%2Fmock.stream" target="_blank">Circuit Breaker </a> - Hystrix Monitor<br></li>
-				<li><a href="http://localhost:8761/" target="_blank">Registry and Recovery </a>  - Eureka<br></li>
-				<li><a href="http://localhost:7777/#/" target="_blank">Spring Boot Admin </a> <br></li>
-				<li><a href="http://localhost:7778/#/" target="_blank">µServices Dashboard Server </a><br></li>
-              </ul>
-            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Architektur</strong>
+          <ul>
+          	<li>Anforderungen</li>
+	          	<ul>
+	          		<li><a href="Vision.html" target="_blank">Vision</a></li>
+	          		<li><a href="Qualitätsziele.html" target="_blank">Qualitätsziele</a></li>
+	          		<li><a href="Randbedingungen.html" target="_blank">Randbedingungen</a></li>
+	          		<li><a href="Risiken.html" target="_blank">Risiken</a></li>
+	          	</ul>
+          	<li><a href="KontextDiagramm.html" target="_blank">Kontext Diagramm</a></li>
+          	<li>Lösungsstrategien</li>
+          		<ul>
+<li><a href="DeepInsight.html" target="_blank">Deep Insight</a></li>          		</ul>
+          	<li>Domain Modell</li>
+	          	<ul>
+	            	<li><a href="StrategicDesign.html" target="_blank">Strategic Design</a></li>
+	            </ul>
+            <li>Bausteinsicht</li>
+	            <ul>
+	            	<li>Überblick</li>
+		            	<ul>
+		            		<li><a href="PortsUndAdapters.html" target="_blank">Ports und Adapters</a></li>
+		            	</ul>
+	            	<li>Gui</li>
+	            		<ul>
+	            			<li><a href="FuhrparkGuiBausteinsicht.html"  target="_blank">Fuhrpark</a></li>
+	            		</ul>
+	            	<li>Server (Srv)</li>
+		            	<ul>
+		            		<li><a href="BuchhaltungSrvBausteinsicht.html"  target="_blank">Buchhaltung</a></li>
+		            		<li><a href="FuhrparkSrvBausteinsicht.html"     target="_blank">Fuhrpark</a></li>
+		            		<li><a href="ReservierungSrvBausteinsicht.html" target="_blank">Reservierung</a></li>
+		            	</ul>
+	            	<li>Service (Service)</li>
+	            </ul>
+            <li>Laufzeitsicht</li>
+            <li>Verteilungssicht</li>
+	            <ul>
+	            	<li><a href="VerteilungHW.html"  target="_blank">Verteilung der Hardware</a></li>
+	            </ul>
+            <li>Cross Cutting Concerns</li>	
+            <li>Entscheidungen</li>
+            <li><a href="Infrastruktur" target="_blank">Infrastruktur</a></li>
+          		<ul>
+          			<li>API-Gateway</li>
+          			<li>Configuration</li>
+          			<li>Loadbalancing</li>
+          			<li>Logging</li>
+          			<li>Registry & Discovery</li>
+          			<li><a href="CCCRest.html" target="_blank">REST Zugriffe</a></li>
+          			<li>Security</li>
+          			<li>Testen</li>
+          			<li>Timeouts</li>
+          		</ul>            
+          </ul>
+        </li>
+        <li>        
+        <li>
+          <strong>Auswertung</strong>
+          	<ul>
+            	<li>Dashboards</li>
+              	<ul>
+					<li><a href="http://localhost:7777/#/" target="_blank">Spring Boot Admin </a></li>
+					<li><a href="http://localhost:7778/#/" target="_blank">µServices Dashboard</a></li>
+					<li><a href="http://localhost:8761/" target="_blank">Registry and Recovery </a>  - Eureka<br></li>
+					<li>Circuit Breaker - Hystrix</li>
+              			<ul>
+							<li><a href="http://localhost:8010/" target="_blank">Dashboard </a></li>
+							<li><a href="http://localhost:8010/hystrix/monitor?stream=http%3A%2F%2Flocalhost%3A8010%2Fmock.stream" target="_blank">Monitor</a></li>
+              			</ul>
+              	</ul>
             <li>Operation
               <ul>
                 <li><a href="http://localhost:8161/admin/queueGraph.jsp" target="_blank">ActiveMQ </a> - Dashboard<br></li>
@@ -50,51 +121,35 @@
 				<li><a href="http://localhost:3000/login" target="_blank">Grafana </a><br></li>
               </ul>
             </li>
-          </ul>
+					
+
+          	</ul>
         </li>
         <li>
-          <strong>Architektur</strong>
-          <ul>
-            <li><a href="DomainModell.html" target="_blank">Domain Modell</a></li>
-            <li><a href="Bausteinsicht.html" target="_blank">Bausteinsicht</a></li>
-            <li><a href="Infrastruktur" target="_blank">Infrastruktur</a></li>
-            <li><a href="Security"      target="_blank">Security</a></li>
-          </ul>
-        </li>
-        <li>        
-        <li>
-          <strong>Auswertung</strong>
-          <ul>
-            <li><a href="#">Item 1</a></li>
-            <li><a href="#">Item 2</a></li>
-            <li><a href="#">Item 3</a></li>
-          </ul>
-        </li>
-        <li>
-          <strong>Entwickler</strong>
-          <ul>
-            <li><a href="#">Git</a></li>
-            <li><a href="#">Logging</a></li>
-            <li><a href="#">Register und Discocery</a></li>
-            <li><a href="#">Feign</a></li>
-            <li><a href="#">Security</a></li>
-            <li><a href="#">Messaginng</a></li>
-            <li><a href="#">Zuul</a></li>
-          </ul>
+          <strong>Entwicklung</strong>
+	        <ul>
+	            <li><a href="#">Entwickler</a></li>
+	            <li><a href="#">Tools</a></li>
+	            <li><a href="#">Literatur</a></li>
+			</ul>	           
         </li>
         <li>
           <strong>µServices</strong>
           <ul>
-            <li><a href="#">Fuhrpark</a>
+            <li>DDD_StattAuto_Srv_Fuhrpark
             	<ul>
-            		<li>REST Api</li>
-            		<li>Features</li>
+            		<li>Owner: Hermann Woock</li>
+            		<li>Beschreibung</li>
+            		<li>Uri: <a href="http://localhost:8181">http://localhost:8181</a></li>
+            		<li>Git: <a href="https://github.com/HLWoock/DDDStattAuto_Srv_Fuhrpark.git">DDDStattAuto_Srv_Fuhrpark</a></li>
+            		<li>REST: <a href="file:///C:/Users/hermannw/Documents/workspace-sts-3.9.0.RELEASE/DDD_StattAuto_Srv_Fuhrpark/build/asciidoc/html5/index.html">Api</a></li>
+            		<li>Bugs: derzeit keine</li>
             	</ul>
             </li>
-            <li><a href="#">Reservierung</a></li>
-            <li><a href="#">Backoffice</a></li>
-            <li><a href="#">Callcenter</a></li>
-            <li><a href="#">Marketing</a></li>
+            <li>DDD_StattAuto_Srv_MitgliederVerwaltung</li>
+            <li>DDD_StattAuto_Srv_Reservierung</li>
+            <li>DDD_StattAuto_Srv_Schadensbearbeitung</li>
+            <li>DDD_StattAuto_Srv_Strafzettel</li>
           </ul>
         </li>
       </ul>
